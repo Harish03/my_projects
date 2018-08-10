@@ -8,12 +8,12 @@
 #include <arpa/inet.h>
 #include <unistd.h>
 
-int fib(int n)
+int fib(int t)
 {
 	int f1 = 0;
 	int f2 = 1;
 	int i;
-	for(i=2;i<=n;i++)
+	for(i=2;i<=t;i++)
 	{
 		int temp = f2;
 		f2 = f2+f1;
