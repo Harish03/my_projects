@@ -11,7 +11,7 @@
 
 int main(){
 int sock;      // client socket discriptor
-int a,c,i;
+int n,c,i;
 unsigned int len;
 char ch[4]="yes";
 char ch1[4];
@@ -36,9 +36,9 @@ exit(-1);
 }
 while(1){
 printf("enter a number:\n");
-scanf("%d",&a);
+scanf("%d",&n);
 
-send(sock,&a,sizeof(a),0);    // sending data back to client...
+send(sock,&n,sizeof(n),0);    // sending data back to client...
 
 recv(sock,&c,sizeof(c),0);
 printf("fibonacci is %d\n",c);	// receiving data from client
